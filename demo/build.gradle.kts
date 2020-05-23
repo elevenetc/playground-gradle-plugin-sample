@@ -1,20 +1,9 @@
-buildscript {
-    repositories {
-        maven {
-            url = uri("../repo")
-        }
-    }
-
-    dependencies {
-        classpath("com.elevenetc.playground.gradle.plugin:playgroundPlugin:1.0.0")
-    }
-}
-
 plugins {
     kotlin("jvm") version "1.3.71"
+    id("playground") version "1.0.0"
 }
 
-group = "com.elevenetc.playground.gradle.plugin.demo"
+group = "com.abc.demo"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -32,4 +21,8 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+}
+
+playground {
+    enabled = true
 }
