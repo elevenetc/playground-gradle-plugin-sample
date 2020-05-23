@@ -1,13 +1,11 @@
 plugins {
     kotlin("jvm") version "1.3.71"
     id("java-gradle-plugin")
-    //id("maven")
-    //id("maven-publish")
     `maven-publish`
-    `maven`
+
 }
 
-group = "com.elevenetc.playground.gradle.plugin"
+group = "com.abc"
 version = "1.0.0"
 
 repositories {
@@ -20,9 +18,9 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        create("playgroundPlugin") {
-            id = "com.elevenetc.playground.gradle.plugin"
-            implementationClass = "com.elevenetc.playground.gradle.plugin.PlaygroundPlugin"
+        create("playground") {
+            id = "playground"
+            implementationClass = "com.abc.Playground"
         }
     }
 }
@@ -38,14 +36,12 @@ tasks {
 
 val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
-    //classifier = "sources"
     from(sourceSets.main.get().allSource)
 }
 
 publishing {
     repositories {
         maven {
-            // change to point to your repo, e.g. http://my.org/repo
             url = uri("./repo")
         }
     }
