@@ -1,7 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="build n upload" type="CompoundRunConfigurationType">
-    <toRun name="upload" type="GradleRunConfiguration" />
-    <toRun name="build" type="GradleRunConfiguration" />
-    <method v="2" />
-  </configuration>
-</component>
