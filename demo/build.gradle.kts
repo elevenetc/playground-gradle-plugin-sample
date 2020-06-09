@@ -25,4 +25,5 @@ tasks {
 
 playground {
     enabled = true
+    someString = "xxx"
 }

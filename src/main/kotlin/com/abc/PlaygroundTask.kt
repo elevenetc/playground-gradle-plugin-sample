@@ -10,6 +10,6 @@ open class PlaygroundTask @Inject constructor(
 ) : DefaultTask() {
     @TaskAction
     fun run() {
-
+        println("task>>>")
     }
 }
