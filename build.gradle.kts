@@ -11,12 +11,14 @@ version = "1.0.0"
 repositories {
     mavenCentral()
     google()
+    jcenter()
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
+    implementation("com.android.tools.build", "gradle", "4.0.0")
     implementation("androidx.test", "rules", "1.2.0", ext = "aar")
-    implementation("com.google.guava", "guava", "29.0-jre")
+    //implementation("com.google.guava", "guava", "29.0-jre")
 }
 
 gradlePlugin {

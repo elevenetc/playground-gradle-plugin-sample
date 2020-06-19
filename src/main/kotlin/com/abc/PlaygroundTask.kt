@@ -6,6 +6,11 @@ import javax.inject.Inject
 
 open class PlaygroundTask @Inject constructor() : DefaultTask() {
 
+    init {
+        description = "Desk"
+        group = "Play"
+    }
+
     @TaskAction
     fun run() {
 
